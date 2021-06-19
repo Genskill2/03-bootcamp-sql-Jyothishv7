@@ -1,4 +1,1 @@
-SELECT books.title FROM books 
-INNER JOIN books_subjects ON books.id = books_subjects.book 
-INNER JOIN subjects ON books_subjects.subject = subjects.id
-WHERE subjects.name IN ('Technology', 'Politics');
+SELECT b.title from books b, books_subjects bj WHERE b.id = bj.book AND bj.subject in (3, 8);
